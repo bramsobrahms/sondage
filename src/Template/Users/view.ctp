@@ -5,18 +5,22 @@
  */
 ?>
 <div class="users view large-9 medium-8 columns content">
-    <h3><?= h($userEntity->nickname) ?></h3>
+    <h3>Profil</h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
+            <th scope="row"><?= __('Nickanme ') ?></th>
+            <td><?=($userEntity->nickname) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id ') ?></th>
             <td><?= $this->Number->format($userEntity->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Email') ?></th>
+            <th scope="row"><?= __('Email ') ?></th>
             <td><?= h($userEntity->email) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('# Surveys') ?></th>
+            <th scope="row"><?= __('Number of surveys ') ?></th>
             <td><?= h($nbSurveys).' '.(($nbSurveys>1)?__(' sondages créés.'):__(' sondage créé.')) ?></td>
         </tr>
     </table>
